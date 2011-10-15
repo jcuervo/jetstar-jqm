@@ -1,0 +1,149 @@
+h1#findFlights {
+    display: block;
+    font-size: 16px;
+    margin: 0 90px;
+    min-height: 56px;
+    outline: 0 none !important;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-overflow: clip;
+    text-indent:-9999px;
+    background: url("headFindFlights.jpg") top center no-repeat;
+    white-space: nowrap;
+}
+a.homeBtn {
+  background:url("homeBtn.jpg");
+  height:32px;
+  width:28px;
+  border:none;
+  text-shadow:none;
+  box-shadow:none;
+  border-radius:0;
+  text-indent:-9999px;
+  top:0.5em !important;
+}
+a.homeBtn span {
+  text-overflow: clip !important;
+  border:none;
+}
+
+/* Content */
+.ui-content {
+  padding:10px !important;
+}
+.wrapper {
+  width:300px;
+  margin:0 auto;
+}
+
+/* Top Navs*/
+ul.commonLst {
+  margin:0;
+  padding:0;
+}
+ul#topNavs {
+  width:294px;
+  margin:0 auto;
+}
+ul#topNavs li {
+  list-style:none;
+  display:inline;
+  float:left;
+}
+ul#topNavs li a {
+  height:33px;
+  width:98px;
+  line-height:33px;
+  background: transparent url("tabs.png") no-repeat;
+  text-align:center;
+  display:block;
+  color:#4e4e4e;
+  text-decoration:none;
+}
+ul#topNavs li a.current {
+  background: transparent url("tabs.png") -98px 0 no-repeat;
+  color:#fff;
+}
+
+ul#fromTo li {
+  list-style:none;
+  display:inline;
+  float:left;
+  width:50%;
+}
+ul#fromTo li div {
+  padding-top:10px;
+  padding-left:15px;
+  height:52px;
+  width:135px;  
+}
+ul#fromTo li div#toInfo {
+  padding-top:10px;
+  padding-left:20px;
+  height:52px;
+  width:130px;  
+}
+ul#fromTo li h5 {
+  margin:0.5em 0 0 0;
+  padding:0 0 0 1.5em;
+}
+#fromInfo {
+  background:transparent url("fromTo.png") no-repeat;
+}
+#toInfo {
+  background:transparent url("fromTo.png") -150px 0 no-repeat;
+}
+ul.ft li{
+  display:block !important;
+  float:none !important;
+}
+li.commonInfoAbb {
+  font-size:1.8em;
+  font-weight:bold;
+}
+
+#depAr {
+  border:1px solid #f2f2f2;
+  width:292px;
+  padding:3px;
+  float:left;
+  -moz-box-shadow: 0 0 3px #eee;
+  -webkit-box-shadow: 0 0 3px #eee;
+  box-shadow: 0 0 3px #eee;
+  border-radius:3px;
+  margin-top:5px;
+}
+
+
+/* Footer */
+.footer {
+    background: #000;
+    border: 1px solid #3F3F3F;
+    color: #FFFFFF;
+    font-weight: bold;
+    height:26px;
+    padding-top:4px;
+    text-align:center;
+}
+a.footerBtn, a.footerBtn:visited {
+  width:95px;
+  text-align:center;
+  background: #383838;
+  border: none;
+  color: #FFFFFF;
+  font-weight: normal;
+  text-shadow: none;
+  box-shadow:none;
+  border-radius:4px;
+}
+a.footerBtn span {
+  font-size:10px;
+  border:none;
+  border-radius:0;
+  text-shadow: none;
+  padding:4px 0 5px 0 !important;
+}
+a.footerBtn span span {
+  
+}

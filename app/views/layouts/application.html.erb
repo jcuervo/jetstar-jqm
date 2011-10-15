@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JetStar</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <%= stylesheet_link_tag    "application" %>
+  
+    <script src="javascripts/modernizr-custom.js"></script>
+    <script>Modernizr.mq('(min-width:0)') || document.write('<script src="javascripts/respond.min.js"><\/script>')</script>
+  
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= yield %>    
+    <%= javascript_include_tag "application" %>
+    <script>
+      window.onload = function() {
+          MBP.scaleFix();
+      }
+    </script>
+  </body>
+</html>
