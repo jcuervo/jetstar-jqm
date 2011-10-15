@@ -94,6 +94,10 @@ ul#fromTo li h5 {
 #toInfo {
   background:transparent url("fromTo.png") -150px 0 no-repeat;
 }
+#fromInfo a, #toInfo {
+  color:#000;
+  text-decoration:none;
+}
 ul.ft li{
   display:block !important;
   float:none !important;
@@ -115,6 +119,24 @@ li.commonInfoAbb {
   margin-top:5px;
 }
 
+/* Search */
+#search, .ui-input-search {
+  width:166px !important;
+  border-radius: 0.5em;
+  border:0 !important;
+  display:block;
+  height:33px;
+}
+.ui-input-search {
+  padding:0 0 0 30px !important;
+}
+label.ui-input-text {
+  width:auto;
+  margin-right:5px;
+  display:inline;
+  color:#000;
+  line-height:12px;
+}
 
 /* Footer */
 .footer {

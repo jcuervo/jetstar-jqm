@@ -5,8 +5,10 @@
   <div data-role="content">
     <a href="#findFlights" data-inline="true">Find Flights</a>
   </div>
-  <div data-role="footer">
-    <h4> <a href="#">Privacy</a></h4>
+  <div data-role="footer" class="footer" data-theme="i">
+    <a href="#" class="footerBtn" >Regular Site</a>
+  	<a href="#" class="footerBtn" >Privacy &amp; Security</a>
+  	<a href="#" class="footerBtn" >Help</a>
   </div>
 </div>
 
@@ -26,10 +28,12 @@
         <li>
           <h5>From</h5>
           <div id="fromInfo">
-            <ul class="commonLst ft">
-              <li class="commonInfoAbb">SYD</li>
-              <li class="commonInfoFul">Sydney</li>
-            </ul>
+            <a href="#findAirports">
+              <ul class="commonLst ft">
+                <li class="commonInfoAbb">SYD</li>
+                <li class="commonInfoFul">Sydney</li>
+              </ul>
+            </a>
           </div>
         </li>
         <li>
@@ -48,6 +52,26 @@
           <li>Arrival Details</li>
         </ul>
       </div>
+    </div>
+  </div>
+  <div data-role="footer" class="footer" data-theme="i">
+    <a href="#" class="footerBtn" >Regular Site</a>
+  	<a href="#" class="footerBtn" >Privacy &amp; Security</a>
+  	<a href="#" class="footerBtn" >Help</a>
+  </div>
+</div>
+
+<div data-role="page" data-theme="i" id="findAirports">
+  <div data-role="header" data-theme="i">
+    <div id="searchBar" class="wrapper">
+      <label for="search">From</label>
+      <input type="search" name="password" id="search" value="" data-theme="c"/>
+      <a href="#home" class="cancelBtn ui-btn-right">Cancel</a>
+    </div>
+  </div>
+  <div data-role="content">
+    <div class="wrapper">
+      Airport list here
     </div>
   </div>
   <div data-role="footer" class="footer" data-theme="i">
