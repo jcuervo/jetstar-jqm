@@ -36,6 +36,9 @@ a.homeBtn span {
   width:300px;
   margin:0 auto;
 }
+.contentWrap {
+  min-height:310px;
+}
 
 /* Top Navs*/
 ul.commonLst {
