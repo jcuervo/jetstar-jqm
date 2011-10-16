@@ -140,6 +140,12 @@ label.ui-input-text {
   color:#000;
   line-height:12px;
 }
+a.cancelBtn {
+  background:transparent url("cancelBtn.jpg") no-repeat;
+  height:34px;
+  width:59px;
+  text-indent:-9999px;
+}
 
 /* Footer */
 .footer {
