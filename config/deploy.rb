@@ -8,7 +8,7 @@ set :use_sudo,      false
 server "96.126.103.64", :app, :web, :db, :primary => true
 
 after "deploy:symlink" do
-  run "cd #{current_path} && bundle"
+  run "cd #{current_path} && bundle update rake"
   #run "ln -s /home/rivereo/recruit/shared/conf/database.yml #{current_path}/config/database.yml"
   run "cd #{current_path} &&  rake assets:precompile"
 end
