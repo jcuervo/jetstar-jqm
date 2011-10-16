@@ -1,3 +1,4 @@
+require 'net/http'
 class PagesController < ApplicationController
   def index
     @origins = findOriginAirports
