@@ -13,7 +13,7 @@ group :production do
   gem 'execjs'
   gem 'therubyracer', '0.9.4'
 end
-
+gem "rake", "0.8.7"
   
 
 # Gems used only for assets and not required
