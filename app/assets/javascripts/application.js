@@ -7,7 +7,10 @@
 //= require jquery
 //= require jqueryui.min
 //= require jquery.mobile.min
+//= require jQuery.ui.datepicker
+//= require jquery.ui.datepicker.mobile
 //= require helper
+
 var centerLatitude = -38.47;
 var centerLongitude = 144.98;
 
@@ -26,6 +29,11 @@ $(document).ready(function() {
     findClosestAirport(centerLatitude, centerLongitude);
     alert('Unable to get nearby airports');
   }
+  //reset type=date inputs to text
+  $( document ).bind( "mobileinit", function(){
+    $.mobile.page.prototype.options.degradeInputs.date = true;
+  });
+  
   // $("#origin").change(function(){
   //     alert("borga");
   //     changeDestination();
