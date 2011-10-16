@@ -94,7 +94,7 @@ ul#fromTo li h5 {
 #toInfo {
   background:transparent url("fromTo.png") -150px 0 no-repeat;
 }
-#fromInfo a, #toInfo {
+#fromInfo a, #toInfo a{
   color:#000;
   text-decoration:none;
 }
@@ -105,6 +105,9 @@ ul.ft li{
 li.commonInfoAbb {
   font-size:1.8em;
   font-weight:bold;
+}
+li.commonInfoFul {
+  font-weight:normal;
 }
 
 #depAr {
