@@ -10,7 +10,7 @@
 //= require helper
 var centerLatitude = -38.47;
 var centerLongitude = 144.98;
-
+var destination_airports = [];
 $(document).ready(function() {
   if (Modernizr.geolocation)
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -26,24 +26,27 @@ $(document).ready(function() {
     findClosestAirport(centerLatitude, centerLongitude);
     alert('Unable to get nearby airports');
   }
-  // $("#origin").change(function(){
-  //     alert("borga");
-  //     changeDestination();
-  //   });
   
   $('#search_from').autocomplete({
     source: origin_airports,
     minLength: 3,
     select: function(event, ui) {
           str = $("#search_from").val();
-          $("#from_shortcode").text(str.substring(str.length-4,str.length-1));
-          $("#from_city").text(str.substring(0,str.length-6));
+          if(str.length > 1){
+            $("#from_shortcode").text(str.substring(str.length-4,str.length-1));
+            $("#from_city").text(str.substring(0,str.length-6));
+            $("#to_shortcode").html("&nbsp;");
+            $("#to_city").text("Destination");
+          }
         }
   });
+
   $("#from_back").click(function(){
     str = $("#search_from").val();
-    $("#from_shortcode").text(str.substring(str.length-4,str.length-1));
-    $("#from_city").text(str.substring(0,str.length-6));
+    if(str.length > 1){
+      $("#from_shortcode").text(str.substring(str.length-4,str.length-1));
+      $("#from_city").text(str.substring(0,str.length-6));
+    }
   });
 });
 
@@ -71,16 +74,26 @@ function changeDestination(){
     type: "GET",
     url: "/pages/findDestinationAirports?o="+ $("#from_shortcode").text(),
     success: function(data){
-      $("#destination option").remove();
-      var obj = jQuery.parseJSON(data);
-      for(i=0;i<data.length;i++)
-        $("#destination").append("<option value='"+data[i].code+"'>"+data[i].city+"</option>");
       if(data.length < 1)
         alert('Sorry, we do not cater flight from the point of origin selected');
       else {
-        
+        destination_airports = [];
+        for(i=0;i<data.length;i++) {
+          destination_airports.push( data[i].city);
+          //$("<li><a href=''>" + data[i].city +  "</a></li>").appendTo("#destinationLists")
+        }
+        $('#search_to').autocomplete({
+          source: destination_airports,
+          minLength: 3,
+          select: function(event, ui) {
+                str = $("#search_to").val();
+                if(str.length > 1){
+                  $("#to_shortcode").text(str.substring(str.length-4,str.length-1));
+                  $("#to_city").text(str.substring(0,str.length-6));
+                }
+              }
+        });
       }
-      //$("#back").click();
     }
   });
 }
