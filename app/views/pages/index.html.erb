@@ -60,14 +60,19 @@
 <div data-role="page" data-theme="i" id="findOriginAirports">
   <div data-role="header" data-theme="i">
     <div id="searchBar" class="wrapper">
-      <label for="search">From</label>
-      <input type="text" name="from" id="search_from" data-theme="c" class="ui-input-text ui-body-c autocomplete"  data-type="search"/>
+      <div id="sbFlds">
+        <input type="text" name="from" id="search_from" data-theme="c" class="ui-input-text ui-body-c autocomplete"  data-type="search"/>
+      </div>
       <a href="#findFlights" class="cancelBtn ui-btn-right" id="from_back">Back</a>
     </div>
   </div>
   <div data-role="content">
     <div class="wrapper contentWrap">
-      Airport list here
+      <ul data-role="listview" data-theme="i">
+        <li data-role="list-divider" role="heading">Airports nearest to your current location</li>
+      	<li><a href="#">Melbourne, Tullamarine</a></li>
+      	<li><a href="#">Melbourne, Avalon</a></li>
+      </ul>
     </div>
   </div>
   <%= render "layouts/footer"%>
