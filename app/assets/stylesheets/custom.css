@@ -113,16 +113,38 @@ li.commonInfoFul {
   font-weight:normal;
 }
 
-#depAr {
-  border:1px solid #f2f2f2;
-  width:292px;
-  padding:3px;
+.depAr {
+  border:1px solid #d5d5d5;
+  width:278px;
+  padding:10px;
   float:left;
   -moz-box-shadow: 0 0 3px #eee;
   -webkit-box-shadow: 0 0 3px #eee;
   box-shadow: 0 0 3px #eee;
   border-radius:3px;
   margin-top:5px;
+}
+.depAr ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.depAr ul li {
+  width:139px;
+  display:inline;
+  float:left;
+}
+.depAr ul li h5 {
+  margin:0;
+  padding:0;
+}
+.depAr ul li h5 span {
+  height:17px;
+  width:18px;
+  display:block;
+}
+span.iconDepart {
+  background:transparent url("icons.jpg") no-repeat;
 }
 
 /* Search */
@@ -143,12 +165,43 @@ li.commonInfoFul {
 
 }
 .ui-input-search {width:170px !important}
-a.cancelBtn {
-  background:transparent url("cancelBtn.jpg") no-repeat;
+a.headBtn {
   height:34px;
   width:59px;
   text-indent:-9999px;
+  border:none;
+  text-shadow:none;
+  box-shadow:none;
+  border-radius:0;
 }
+a.headBtn span {
+  padding:0 !important;
+  border:none !important;
+  text-overflow: clip !important;
+  border:none;
+}
+a.cancelBtn {
+  background:transparent url("cancelBtn.jpg") no-repeat;
+}
+a.doneBtn {
+  background:transparent url("doneBtn.jpg") no-repeat;
+}
+
+
+h1#headMark {
+    display: block;
+    font-size: 16px;
+    margin: 0 90px;
+    min-height: 56px;
+    outline: 0 none !important;
+    overflow: hidden;
+    padding: 15px 0 0 0;
+    text-align: center;
+    background: url("headMark.jpg") top center no-repeat;
+    white-space: nowrap;
+}
+
+
 
 /* Footer */
 .footer {

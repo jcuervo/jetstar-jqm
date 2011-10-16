@@ -46,11 +46,17 @@
           </div>
         </li>
       </ul>
-      <div id="depAr">
-        <ul>
-          <li>Departure Details</li>
-          <li>Arrival Details</li>
-        </ul>
+      <div class="depAr">
+        <a href="#pickDate">
+          <ul>
+            <li>
+              <h5>Departs <span class="iconDepart"></span></h5>
+            </li>
+            <li>
+              <h5>Returns <span class="iconReturn"></span></h5>
+            </li>
+          </ul>
+        </a>
       </div>
     </div>
   </div>
@@ -96,12 +102,24 @@
 
 <div data-role="page" data-theme="i" id="pickDate">
   <div data-role="header" data-theme="i">
-    <a href="#findFlights" class="cancelBtn ui-btn-left" id="from_back">Back</a>
-    <h1 id="findFlights">Pick Date</h1>
-    <a href="#home" class="homeBtn">Home</a>
+    <a href="#findFlights" class="cancelBtn headBtn" id="from_back">Back</a>
+    <h1 id="headMark">Pick Date</h1>
+    <a href="#home" class="doneBtn headBtn">Done</a>
   </div>
   <div data-role="content">
     <div class="wrapper contentWrap">
+      <div class="depAr">
+        <a href="#pickDate">
+          <ul>
+            <li>
+              <h5>Departs <span class="iconDepart"></span></h5>
+            </li>
+            <li>
+              <h5>Returns <span class="iconReturn"></span></h5>
+            </li>
+          </ul>
+        </a>
+      </div>
       <input type="date" name="date" id="date" value=""  />
     </div>
   </div>
