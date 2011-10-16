@@ -7,11 +7,7 @@
       <a href="#findFlights" data-inline="true">Find Flights</a>
     </div>
   </div>
-  <div data-role="footer" class="footer" data-theme="i">
-    <a href="#" class="footerBtn" >Regular Site</a>
-  	<a href="#" class="footerBtn" >Privacy &amp; Security</a>
-  	<a href="#" class="footerBtn" >Help</a>
-  </div>
+  <%= render "layouts/footer"%>
 </div>
 
 <div data-role="page" data-theme="i" id="findFlights">
@@ -30,10 +26,10 @@
         <li>
           <h5>From</h5>
           <div id="fromInfo">
-            <a href="#findAirports">
+            <a href="#findOriginAirports">
               <ul class="commonLst ft">
-                <li class="commonInfoAbb">SYD</li>
-                <li class="commonInfoFul">Sydney</li>
+                <li class="commonInfoAbb" id="from_shortcode">SYD</li>
+                <li class="commonInfoFul" id="from_city">Sydney</li>
               </ul>
             </a>
           </div>
@@ -41,10 +37,10 @@
         <li>
           <h5>To</h5>
           <div id="toInfo">
-            <a href="#findAirports">
+            <a href="#findDestinationAirports">
             <ul class="commonLst ft">
-              <li class="commonInfoAbb">MEL</li>
-              <li class="commonInfoFul">Melbourne</li>
+              <li class="commonInfoAbb" id="to_shortcode">MEL</li>
+              <li class="commonInfoFul" id="to_city">Melbourne</li>
             </ul>
             </a>
           </div>
@@ -58,21 +54,16 @@
       </div>
     </div>
   </div>
-  <div data-role="footer" class="footer" data-theme="i">
-    <a href="#" class="footerBtn" >Regular Site</a>
-  	<a href="#" class="footerBtn" >Privacy &amp; Security</a>
-  	<a href="#" class="footerBtn" >Help</a>
-  </div>
+  <%= render "layouts/footer"%>
 </div>
 
-<div data-role="page" data-theme="i" id="findAirports">
+<div data-role="page" data-theme="i" id="findOriginAirports">
   <div data-role="header" data-theme="i">
     <div id="searchBar" class="wrapper">
       <div id="sbFlds">
-          <!-- <label for="search" id="sbLblFld">From</label> -->
-          <input type="search" name="password" id="search" value="" data-theme="c"/>
+        <input type="text" name="from" id="search_from" data-theme="c" class="ui-input-text ui-body-c autocomplete"  data-type="search"/>
       </div>
-      <a href="#findFlights" class="cancelBtn ui-btn-right">Cancel</a>
+      <a href="#findFlights" class="cancelBtn ui-btn-right" id="from_back">Back</a>
     </div>
   </div>
   <div data-role="content">
@@ -84,9 +75,21 @@
       </ul>
     </div>
   </div>
-  <div data-role="footer" class="footer" data-theme="i">
-    <a href="#" class="footerBtn" >Regular Site</a>
-  	<a href="#" class="footerBtn" >Privacy &amp; Security</a>
-  	<a href="#" class="footerBtn" >Help</a>
+  <%= render "layouts/footer"%>
+</div>
+
+<div data-role="page" data-theme="i" id="findDestinationAirports">
+  <div data-role="header" data-theme="i">
+    <div id="searchBar" class="wrapper">
+      <label for="search">From</label>
+      <input type="text" name="from" id="search_to" data-theme="c" class="ui-input-text ui-body-c autocomplete"  data-type="search"/>
+      <a href="#findFlights" class="cancelBtn ui-btn-right" id="to_back">Back</a>
+    </div>
   </div>
+  <div data-role="content">
+    <div class="wrapper contentWrap">
+      Airport list here
+    </div>
+  </div>
+  <%= render "layouts/footer"%>
 </div>
