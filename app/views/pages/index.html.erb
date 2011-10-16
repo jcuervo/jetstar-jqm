@@ -68,14 +68,20 @@
 <div data-role="page" data-theme="i" id="findAirports">
   <div data-role="header" data-theme="i">
     <div id="searchBar" class="wrapper">
-      <label for="search">From</label>
-      <input type="search" name="password" id="search" value="" data-theme="c"/>
+      <div id="sbFlds">
+          <!-- <label for="search" id="sbLblFld">From</label> -->
+          <input type="search" name="password" id="search" value="" data-theme="c"/>
+      </div>
       <a href="#findFlights" class="cancelBtn ui-btn-right">Cancel</a>
     </div>
   </div>
   <div data-role="content">
     <div class="wrapper contentWrap">
-      Airport list here
+      <ul data-role="listview" data-theme="i">
+        <li data-role="list-divider" role="heading">Airports nearest to your current location</li>
+      	<li><a href="#">Melbourne, Tullamarine</a></li>
+      	<li><a href="#">Melbourne, Avalon</a></li>
+      </ul>
     </div>
   </div>
   <div data-role="footer" class="footer" data-theme="i">
