@@ -28,8 +28,8 @@
           <div id="fromInfo">
             <a href="#findOriginAirports">
               <ul class="commonLst ft">
-                <li class="commonInfoAbb" id="from_shortcode">SYD</li>
-                <li class="commonInfoFul" id="from_city">Sydney</li>
+                <li class="commonInfoAbb" id="from_shortcode">&nbsp;</li>
+                <li class="commonInfoFul" id="from_city">Origin</li>
               </ul>
             </a>
           </div>
@@ -39,8 +39,8 @@
           <div id="toInfo">
             <a href="#findDestinationAirports">
             <ul class="commonLst ft">
-              <li class="commonInfoAbb" id="to_shortcode">MEL</li>
-              <li class="commonInfoFul" id="to_city">Melbourne</li>
+              <li class="commonInfoAbb" id="to_shortcode">&nbsp;</li>
+              <li class="commonInfoFul" id="to_city">Destination</li>
             </ul>
             </a>
           </div>
@@ -70,8 +70,6 @@
     <div class="wrapper contentWrap">
       <ul data-role="listview" data-theme="i" class="contentWrap">
         <li data-role="list-divider" role="heading">Airports nearest to your current location</li>
-      	<li><a href="#">Melbourne, Tullamarine</a></li>
-      	<li><a href="#">Melbourne, Avalon</a></li>
       </ul>
     </div>
   </div>
@@ -82,13 +80,15 @@
   <div data-role="header" data-theme="i">
     <div id="searchBar" class="wrapper">
       <label for="search">From</label>
-      <input type="text" name="from" id="search_to" data-theme="c" class="ui-input-text ui-body-c autocomplete"  data-type="search"/>
+      <input type="text" name="to" id="search_to" data-theme="c" class="ui-input-text ui-body-c autocomplete" data-type="search" placeholder="Select Destination Airport"/>
       <a href="#findFlights" class="cancelBtn ui-btn-right" id="to_back">Back</a>
     </div>
   </div>
   <div data-role="content">
     <div class="wrapper contentWrap">
-      Airport list here
+      <ul data-role="listview" data-theme="i" id="destinationLists">
+        <li data-role="list-divider" role="heading">Airports nearest to your current location</li>
+      </ul>
     </div>
   </div>
   <%= render "layouts/footer"%>
